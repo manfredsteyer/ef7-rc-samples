@@ -1,0 +1,8 @@
+﻿CREATE FUNCTION [dbo].GetFlights
+(
+	@from nvarchar(30),
+	@to nvarchar(30)
+)
+RETURNS TABLE
+AS
+	RETURN select * from flight where [from] = @from and [to] = @to;

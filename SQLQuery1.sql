@@ -1,0 +1,1 @@
+﻿alter table flights add PlaneType varchar(50) null;
