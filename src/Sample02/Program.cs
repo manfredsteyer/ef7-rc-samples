@@ -67,7 +67,7 @@ namespace Sample02
             using (FlugDbContext ctx = new FlugDbContext())
             {
                 // ctx.Database.EnsureDeleted();
-                // ctx.Database.EnsureCreated();
+                ctx.Database.EnsureCreated();
 
                 var f1 = new Flight { From = "Graz", To = "Hamburg", Date = DateTime.Now };
                 var b1 = new Booking { Price = 300 };
@@ -99,6 +99,7 @@ namespace Sample02
         {
             using (FlugDbContext ctx = new FlugDbContext())
             {
+                // Please find the TVF GetFlights in the attached Textfile
                 var flight = ctx.Flights
                                 .FromSql("select * from dbo.GetFlights(@p0, @p1)", "Vienna", "London")
                                 .Where(f => f.Date > DateTime.Today)
@@ -107,8 +108,7 @@ namespace Sample02
                 Console.WriteLine("Count: " + flight.Count);
             }
         }
-
-
+        
         static void ShadowProperties()
         {
             using (FlugDbContext ctx = new FlugDbContext())

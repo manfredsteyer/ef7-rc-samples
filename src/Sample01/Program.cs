@@ -62,8 +62,8 @@ namespace Sample01
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder
-                .UseSqlServer(@"Data Source=(localdb)\ProjectsV12;Initial Catalog=FlightDb;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False")
-                .DisableQueryClientEvaluation();
+                .UseSqlServer(@"Data Source=(localdb)\ProjectsV12;Initial Catalog=FlightDb;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False");
+                //.DisableQueryClientEvaluation();
         }
 
     }
