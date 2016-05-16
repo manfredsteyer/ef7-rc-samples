@@ -1,6 +1,6 @@
-# EF7 Samples
+# EF Core 1 (formerly EF 7) Samples
 
-Shows the following new features of EF 7 RC:
+Shows the following new features of EF Core 1 RC:
 
 - Using Model-Metadata for Custom-Convention
 - Handling of detached Entities with Update and TrackGraph
